@@ -11,7 +11,7 @@ jobs:
   cleanup:
     name: Request Feedback
     runs-on: ubuntu-latest
-    if: ${{ !github.event.issue.pull_request && !contains(github.organization.tannerabread-org, github.event.issue.user.login) }}
+    if: ${{ !github.event.issue.pull_request && !contains(github.orgs.tannerabread-org, github.event.issue.user.login) }}
 
     steps:
       - name: make comment requesting feedback
